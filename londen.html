@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <title>Fashion Week</title>
+  </head>
+  <body>
+  <h1>
+    Fashion Week
+  </h1>
+
+        <img src="black linee.png" class="black-line">
+  <div class="nav-bar">
+    <ul>
+      <p class="home-text">
+   <li><a href="index.html">HOME</a></li>
+   <li><a href="newyork.html">NEW YORK</a></li>
+   <li><a href="paris.html">PARIS</a></li>
+   <li><a href="milan.html">MILAN</a></li>
+   <li><a href="londen.html">LONDEN</a></li>
+   <li><a href="trends.html">TRENDS</a></li>
+  </p>
+  </ul>
+  </div>
+
+        <img src="black linee.png" class="black-line">
+
+<div class="slide-show">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<div class="slideshow-container">
+
+  <div class="mySlides fade">
+    <p class="slides"><b> <font size= "7">B<font size= "5">urberry</b></p>
+  <div class="numbertext">1 / 6</div>
+  <video width="600" height="500" controls>
+    <source src="burberry.mp4"
+  </video>
+  </div>
+
+  <div class="mySlides fade">
+    <p class="slides"><b> <font size= "7">J<font size= "5">.W.Anderson</b></p>
+  <div class="numbertext">2 / 6</div>
+  <video width="600" height="500" controls>
+    <source src="j-w-anderson.mp4"
+    </video>
+  </div>
+
+  <div class="mySlides fade">
+  <p class="slides"><b> <font size= "7">T<font size= "5">ommy Hilfiger</b></p>
+<div class="numbertext">3 / 6</div>
+   <video width="600" height="500" controls>
+    <source src="tommy-hilfiger.mp4"
+  </video>
+  </div>
+
+  <div class="mySlides fade">
+    <p class="slides"><b> <font size= "7">T<font size= "5">opshop</b></p>
+  <div class="numbertext">4 / 6</div>
+    <video width="600" height="500" controls>
+      <source src="topshop.mp4"
+  </video>
+  </div>
+
+  <div class="mySlides fade">
+    <p class="slides"><b> <font size= "7">C<font size= "5">hristopher Kane</b></p>
+  <div class="numbertext">5 / 6</div>
+   <video width="600" height="500" controls>
+    <source src="christopher-kane.mp4"
+  </video>
+  </div>
+
+  <div class="mySlides fade">
+    <p class="slides"><b> <font size= "7">M<font size= "5">arques'Almeida</b></p>
+  <div class="numbertext">6 / 6</div>
+   <video width="600" height="500" controls>
+    <source src="marques-almeida.mp4"
+  </video>
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+  </div>
+  </div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html>

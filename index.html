@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <title>Fashion Week</title>
+
+</head>
+<body>
+<h1>
+  Fashion Week
+</h1>
+
+      <img src="black linee.png" class="black-line">
+<div class="nav-bar">
+  <ul>
+    <p class="home-text">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="newyork.html">NEW YORK</a></li>
+      <li><a href="paris.html">PARIS</a></li>
+      <li><a href="milan.html">MILAN</a></li>
+      <li><a href="londen.html">LONDEN</a></li>
+      <li><a href="trends.html">TRENDS</a></li>
+</p>
+</ul>
+</div>
+
+      <img src="black linee.png" class="black-line">
+
+<!-- Slide Show -->
+<div class="slide-show1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div style="text-align:center">
+  <div class="numbertext">1 / 4</div>
+  <img src="home.jpg" style="width:200%">
+</div>
+</div>
+
+<div class="mySlides fade">
+  <div style= "tekst-align: center" >
+  <div class="numbertext">2 / 4</div>
+  <img src="home.2.jpg" style="width:200%">
+</div>
+</div>
+
+<div class="mySlides fade">
+  <div style= "tekst-align: center" >
+  <div class="numbertext">3 / 4</div>
+  <img src="home.3.jpg" style="width:200%">
+</div>
+</div>
+
+<div class="mySlides fade">
+  <div style= "tekst-align: center" >
+  <div class="numbertext">4 / 4</div>
+  <img src="home.4.jpg" style="width:200%">
+</div>
+</div>
+
+
+<a class="prev" onclick="p lusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<!-- About Us -->
+<section class="about-us" style="max-width:8000px">
+  <h2> <font size= "6">ABOUT US</h2>
+  <p><font size= "7">W<font size= "5">e are <b>Jistke</b> and <b>Amy</b> and we love fashion and everything that comes with it.
+    We wanted to share our love for fashion and Fashion-Week and that's why we've created this site. On our site you can see the reviews off all the best shows of Fashion Week '18. We also share the best trends for winter '17. So we hope you like it! </p>
+  <section class="about-us" style="max-width:600px">
+    <h3 class="w3-wide">ENJOY XO</h3>
+</section>
+</body>
+
+</html>
